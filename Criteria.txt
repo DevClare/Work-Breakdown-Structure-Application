@@ -1,0 +1,23 @@
+Criteria(e)
+
+In the program, I implemented the Strategy pattern. Strategy pattern is used to get the approach for reconciling different estimates, whether by taking the highest estimate, median estimate or asking the user to discuss among themselves for a single revised estimate. 
+
+Strategy pattern is implemented because for each of the approach, each of them will take in the user input for the effort value and handle the effort value that are different. All the approach will return the same result, which is the new effort value.
+
+Estimate class act as an interface class and defined the doOption method. doOption method take in List of Integer of user input of effort and return single value of integer, which is the new effort.
+
+Highest, Median and Discuss act as the concrete class that implements the doOption methods defined in the Estimate class.
+
+Criteria (f)
+
+In the program, a data file containing a hierarchical "work breakdown structure" (WBS) is loaded ad saved.
+
+In order to maintain the hierarchy, I implemented the composite pattern. Composite pattern is used for the Parent's Task and the Subtask to creates a tree structures for the work breakdown structure. 
+
+TaskApplication class act as the common interface of the Task class, a leaf-node class and the Id class, a composite-node class. 
+
+Task class contains data of the task that are not broken down. 
+
+Id class, contains tasks that are broken down into other tasks. The task that are broken down become the parent task and the other tasks are grouped into current task's. With the Parent's Task being at the top-level of the hierarchy. 
+
+As for the task that are not broken down and does not have parent's ID, they are grouped together with "none" acting as the parent or being the top-level of the hierarchy."none" does not come from the file, instead created to hold the ID without parent's ID.
